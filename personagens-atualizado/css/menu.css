@@ -1,0 +1,244 @@
+@import url("style.css");
+
+body {
+  min-height: 100vh;
+  gap: 20vh;
+}
+
+.marvel,
+.dc {
+  padding-top: 10vh;
+  display: flex;
+  gap: 20vh;
+}
+
+.marvel p,
+.dc p,
+.marvel .logo,
+.dc .logo {
+  text-align: justify;
+  color: white;
+  font-weight: 700;
+  padding: 6%;
+}
+
+.marvel {
+  position: relative;
+  overflow: hidden;
+  padding: 5vh;
+  display: flex;
+  gap: 25vh;
+}
+
+.marvel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../img/Mv-background-intro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 70%;
+
+  transform: scaleX(-1);
+  z-index: 1;
+}
+
+.marvel .logo,
+.marvel p {
+  position: relative;
+  z-index: 2;
+}
+
+.dc {
+  position: relative;
+  overflow: hidden;
+  padding: 5vh;
+  display: flex;
+  gap: 25vh;
+}
+
+.dc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("https://pbs.twimg.com/media/GQ-svpObwAYiAAq.jpg:large");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+
+  transform: scaleX(1);
+  z-index: 1;
+}
+
+.dc .logo,
+.dc p {
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  flex: 0 0 150px;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.divisor {
+  padding: 5vh;
+}
+
+.dc-banner-gif,
+.mv-banner-gif {
+  padding: 1vh 0;
+  flex: 0 0 2%;
+  text-align: center;
+  width: 100%;
+}
+
+.mv-banner-gif img {
+  text-align: center;
+  width: 90%;
+}
+
+.dc-banner-gif img {
+  text-align: center;
+  width: 50%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+}
+
+.navbar {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+  .dc-banner-gif img,
+  .mv-banner-gif img {
+    text-align: center;
+    width: 10%;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main p {
+    text-align: center;
+  }
+
+  .marvel p,
+  .dc p,
+  .marvel .logo,
+  .dc .logo {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    padding: 3%;
+  }
+
+  .marvel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/Mv-background-intro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+
+    transform: scaleX(-1);
+    z-index: 1;
+  }
+}
+
+.marvel:not(:hover),
+.dc:not(:hover) {
+  transition-duration: 2s;
+  filter: opacity(95%) blur(0.6px);
+}
+
+.marvel:hover,
+.dc:hover {
+  transition-duration: 1.5s;
+  transform: translateY(10%);
+}
+
+.links {
+  margin-left: 75%;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem;
+}
+
+.links a {
+  padding: 1em;
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.mv-txt,
+.mv-txt a:visited {
+  background-image: linear-gradient(
+    to right,
+    white 0%,
+    rgb(141, 22, 22) 30%,
+    rgb(105, 33, 33) 70%,
+    white 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: background-position 1s ease;
+}
+.links a:hover {
+  background-position: 100% 0;
+}
+
+.dc-txt,
+.dc-txt a:visited {
+  background-image: linear-gradient(
+    to right,
+    white 0%,
+    rgb(133, 133, 255) 30%,
+    rgb(6, 6, 155) 40%,
+    rgb(21, 21, 53) 60%,
+    white 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 1s ease;
+}

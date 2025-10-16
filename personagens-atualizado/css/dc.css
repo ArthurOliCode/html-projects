@@ -3,11 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #0e0000;
   background-color: #030918;
   color: #ffffff;
@@ -26,7 +25,7 @@ body {
 }
 
 .navbar img {
-  max-height: 65px; 
+  max-height: 65px;
 }
 
 /* container */
@@ -42,7 +41,7 @@ body {
 .character-card {
   background-color: #ddd;
   width: 250px;
-  height: auto; 
+  height: auto;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -129,7 +128,7 @@ footer {
   background-color: #ddd;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .overlay-content img {
@@ -164,4 +163,52 @@ footer {
   border-radius: 5px;
 }
 
+/* poderes */
+.power-card {
+  background-color: #f4f4f4;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
 
+.power-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.power-card p {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.links {
+  position: relative;
+}
+
+.links::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  bottom: -300%;
+  left: 80%;
+  transform: translateY(-50%);
+
+  color: white;
+  background-color: #222;
+  padding: 4% 6%;
+  border-radius: 15%;
+  font-size: 0.8em;
+  white-space: nowrap;
+  z-index: 1000;
+  transition: opacity 1s, visibility 1s ease;
+}
+
+.links:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s, visibility 1s ease;
+}

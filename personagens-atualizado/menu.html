@@ -1,21 +1,87 @@
 <!-- teste para a pagina principal -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página Principal</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <nav class="navbar">
-    <img src="logo.png" alt="Logo do Site" />
-    <h1>Universo de Personagens</h1>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/icon-home.svg" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <title>Página Principal</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="img/gif-home.gif" alt="Logo do Site" />
+        <h1>Universo de Personagens</h1>
+        <div class="links">
+          <a href="marvel.html" class="mv-txt">Marvel</a>
+          <a href="dc.html" class="dc-txt">DC</a>
+        </div>
+      </nav>
+    </header>
 
-  <main class="conteudo">
-    <h2>Bem-vindo!</h2>
-    <p>Explore os personagens mais icônicos da Marvel e da DC Comics.</p>
-  </main>
-</body>
+    <main class="conteudo">
+      <section>
+        <div class="intro">
+          <h2>Bem-vindo!</h2>
+          <p>Explore os personagens mais icônicos da Marvel e da DC Comics.</p>
+        </div>
+
+        <div class="marvel">
+          <div class="logo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg"
+              alt="Logo da Marvel comics"
+            />
+          </div>
+
+          <p>
+            A Marvel Comics é uma editora nascida como Timely Comics em 1939,
+            que se consolidou na Era de Prata (anos 60) com a criação de heróis
+            falíveis e humanizados como Homem-Aranha, X-Men e Vingadores. Após a
+            compra pela Disney, a Marvel Studios estabeleceu o UCM (Universo
+            Cinematográfico Marvel) em 2008, redefinindo a indústria com um
+            universo de filmes interligados.
+          </p>
+        </div>
+
+        <div class="mv-banner-gif">
+          <img
+            src="img/spider-banner.gif"
+            alt="Banner gif da dc com um flash correndo"
+          />
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="dc">
+          <p>
+            A DC Comics (Detective Comics) é a pioneira do gênero de
+            super-heróis, responsável por criar a "Trindade" original: Superman
+            (1938), Batman (1939) e Mulher-Maravilha.Propriedade da Warner Bros.
+            Discovery, a DC é conhecida por narrativas maduras e ambiciosas em
+            quadrinhos, como Watchmen e O Cavaleiro das Trevas Retorna.
+          </p>
+
+          <div class="logo">
+            <img src="img/pngwing.com.png" alt="Logo da DC comics" />
+          </div>
+        </div>
+
+        <div class="dc-banner-gif">
+          <img
+            src="img/flash-banner.gif"
+            alt="Banner gif da dc com um flash correndo"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Universo Marvel & 2025 Universo DC.</p>
+      <div class="contato">
+        <p>Arthur & Júlia</p>
+      </div>
+    </footer>
+  </body>
 </html>
