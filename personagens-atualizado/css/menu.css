@@ -186,13 +186,14 @@ footer {
 .marvel:not(:hover),
 .dc:not(:hover) {
   transition-duration: 2s;
-  filter: opacity(95%) blur(0.6px);
+  filter: opacity(80%) blur(0.8px);
 }
 
 .marvel:hover,
 .dc:hover {
   transition-duration: 1.5s;
   transform: translateY(10%);
+  filter: contrast(1.2px);
 }
 
 .links {
@@ -294,4 +295,16 @@ footer {
 .quadrinhos {
   max-width: 30%;
   padding: 6%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.ativo {
+  opacity: 1;
+  transform: translateY(0%);
 }

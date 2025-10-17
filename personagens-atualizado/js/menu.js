@@ -1,25 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const box = document.querySelector("div#elementoAnimacaoEixoY");
+const revelarElemento = document.querySelectorAll(".reveal");
 
-  const windowHeight = window.innerHeight;
+const opcoesVisualizacao = {
+  root: null,
+  margin: "0px",
+  threshold: 0.1,
+};
 
-  function animarRolagem() {
-    const scrollPosition = window.scrollY;
-    const boxTop = box.getBoundingClientRect().top + scrollPosition;
-    const startPoint = boxTop - windowHeight / 2;
-    const endPoint = startPoint + 300;
+const observadorCallback = (entidades, observador) => {
+  entidades.forEach((entidade) => {
+    if (entidade.isIntersecting) {
+      entidade.target.classList.add("ativo");
 
-    let progresso = scrollPosition - startPoint - (endPoint - startPoint);
+      observador.unobserve(entidade.target);
+    }
+  });
+};
 
-    progresso = Math.max(0, Math.min(1, progresso));
+const observador = new IntersectionObserver(
+  observadorCallback,
+  opcoesVisualizacao
+);
 
-    const translationY = progresso * -100;
-    const opacidade = 1 - progresso;
-
-    box.style.transform = `translateY(${translationY}px)`;
-    box.style.opacity = opacidade;
-  }
-  window.addEventListener("scroll", animarRolagem);
-
-  animarRolagem();
+revelarElemento.forEach((elemento) => {
+  observador.observe(elemento);
 });
