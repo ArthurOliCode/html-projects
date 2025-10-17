@@ -5,6 +5,17 @@ body {
   gap: 20vh;
 }
 
+p {
+  text-align: justify;
+  color: white;
+  font-weight: 700;
+  padding: 6%;
+}
+
+.intro p {
+  text-align: center;
+}
+
 .marvel,
 .dc {
   padding-top: 10vh;
@@ -12,13 +23,9 @@ body {
   gap: 20vh;
 }
 
-.marvel p,
-.dc p,
 .marvel .logo,
 .dc .logo {
   text-align: justify;
-  color: white;
-  font-weight: 700;
   padding: 6%;
 }
 
@@ -189,7 +196,7 @@ footer {
 }
 
 .links {
-  margin-left: 75%;
+  margin-left: 65%;
   font-family: "Segoe UI", sans-serif;
   font-size: 1rem;
 }
@@ -221,8 +228,11 @@ footer {
 
   transition: background-position 1s ease;
 }
+
 .links a:hover {
+  transform: translateY(-10%);
   background-position: 100% 0;
+  transition: transform 0.6s ease-in-out;
 }
 
 .dc-txt,
@@ -241,4 +251,47 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background-position 1s ease;
+}
+
+.comics {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  background-image: url("https://wallpapercat.com/w/full/8/3/1/2174624-3840x2160-desktop-4k-dc-comics-background.jpg");
+  background-position: right 2%;
+  border-radius: 2em;
+  overflow: hidden;
+  gap: 25px;
+}
+
+.comics p {
+  text-align: justify;
+  font-size: 120%;
+  max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .comics p {
+    text-align: justify;
+    font-size: 100%;
+    max-width: 50%;
+  }
+
+  .quadrinhos {
+    max-width: 30%;
+    padding: 6%;
+  }
+}
+
+.comics img {
+  max-width: 15em;
+  height: auto;
+  position: relative;
+  flex: 0 0 100px;
+}
+
+.quadrinhos {
+  max-width: 30%;
+  padding: 6%;
 }
